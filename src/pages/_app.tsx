@@ -12,7 +12,7 @@ import { ThemeProvider } from '@mui/material';
 import theme from '@/store/theme/theme';
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode;
+  getLayout?: (page: ReactElement) => ReactNode; // eslint-disable-line no-unused-vars
 };
 
 type AppPropsWithLayout = AppProps & {
