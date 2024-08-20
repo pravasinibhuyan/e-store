@@ -1,118 +1,40 @@
 import { Box } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-
-import data from '@/assets/images/baby-cap-black.png';
-import data2 from '@/assets/images/baby-onesie-beige-1.png';
-import data3 from '@/assets/images/bag-black.png';
-import data4 from '@/assets/images/bomber-jacket-army.png';
-import data5 from '@/assets/images/t-shirt-spiral-3.png';
+import { sliderItem } from '@/components/Data';
+import CustomButton from '@/components/common/CustomButton';
 
 const CarouselComponent = () => {
   return (
     <>
       <Box className="slider">
         <Box className="slide-track">
-          <Box className="slide">
-            <Image
-              src={data}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>
-          <Box className="slide">
-            <Image
-              src={data2}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>
-          <Box className="slide">
-            <Image
-              src={data3}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>
-          <Box className="slide">
-            <Image
-              src={data4}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>
-          <Box className="slide">
-            <Image
-              src={data5}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>{' '}
-          <Box className="slide">
-            <Image
-              src={data5}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>{' '}
-          <Box className="slide">
-            <Image
-              src={data5}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>{' '}
-          <Box className="slide">
-            <Image
-              src={data5}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>{' '}
-          <Box className="slide">
-            <Image
-              src={data5}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>{' '}
-          <Box className="slide">
-            <Image
-              src={data5}
-              height="100"
-              width="200"
-              alt=""
-              priority
-              className="img"
-            />
-          </Box>
+          {sliderItem.map((item) => (
+            <Box
+              className="slide custom-border"
+              sx={{ position: 'relative' }}
+              key={item.id}
+            >
+              <Image
+                src={item.image}
+                height="100"
+                width="200"
+                alt=""
+                priority
+                className="img image-zoom"
+              />
+              <Box
+                sx={{
+                  position: 'absolute',
+                  zIndex: 999,
+                  bottom: '0.5rem',
+                  left: '1rem',
+                }}
+              >
+                <CustomButton title="" price="" />
+              </Box>
+            </Box>
+          ))}
         </Box>
       </Box>
     </>
