@@ -46,3 +46,27 @@ export const sliderItem = [
     image: data5,
   },
 ];
+
+export const footerList = [
+  { list: 'Home', path: '/' },
+  { list: 'About', path: '/about' },
+  { list: 'Terms & Conditions', path: '#' },
+  { list: 'Privacy Policy', path: '#' },
+  { list: 'Faq', path: '#' },
+];
+
+export const projectFeatureList = [
+  'Out of stocks',
+  'Order history',
+  'Order status',
+  'Cross variant / option availability (aka. Amazon style)',
+  'Seamless and secure checkout via RazorPay Checkout',
+  'And more!',
+];
+export const usedFeatureList = [
+  'Next.js Page Router',
+  `Optimized for SEO using Next.js's Metadata`,
+  'React Server Components Rendering',
+  'Styling with Material UI',
+  'And more!',
+];

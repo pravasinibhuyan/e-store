@@ -9,16 +9,10 @@ import {
 import Image from 'next/image';
 import logo from '@/assets/images/sticker.png';
 import { useRouter } from 'next/router';
+import { footerList } from '@/components/Data';
 
 function Footer() {
   const router = useRouter();
-  const footerList = [
-    { list: 'Home', path: '/' },
-    { list: 'About', path: '/about' },
-    { list: 'Terms & Conditions', path: '#' },
-    { list: 'Privacy Policy', path: '#' },
-    { list: 'Faq', path: '#' },
-  ];
 
   const handleRedirect = (path: string) => {
     router.push(path);
@@ -27,11 +21,13 @@ function Footer() {
     <Box>
       <Box
         sx={{
-          maxWidth: '50rem',
+          width: '100%',
+          maxWidth: '1500px',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'flex-start',
           margin: 'auto',
+          borderTop: '1px solid lightgrey',
         }}
       >
         <Box
@@ -70,6 +66,9 @@ function Footer() {
                 primary={item.list}
                 sx={{
                   cursor: 'pointer',
+                  '& .MuiTypography-root': {
+                    fontSize: '14px',
+                  },
                   '& .MuiTypography-root:hover': {
                     textDecoration: 'underline',
                   },
@@ -82,7 +81,11 @@ function Footer() {
       </Box>
       <Divider />
       <Box sx={{ padding: '2rem 0', maxWidth: '50rem', margin: 'auto' }}>
-        <Typography variant="subtitle1" color="grey" sx={{ textAlign: 'left' }}>
+        <Typography
+          variant="subtitle1"
+          color="grey"
+          sx={{ textAlign: { xs: 'center', sm: 'left' } }}
+        >
           © 2024 STORE, All rights reserved.
         </Typography>
       </Box>

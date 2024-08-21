@@ -5,6 +5,7 @@ import Image from 'next/image';
 import banner1 from '@/assets/images/t-shirt-circles-black.png';
 import banner2 from '@/assets/images/bag-black.png';
 import banner3 from '@/assets/images/cup-black.png';
+import { useRouter } from 'next/router';
 
 const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -13,6 +14,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const HomeBanner = () => {
+  const router = useRouter();
+
+  const handleClick = (id: number) => {
+    router.push(`/product/${id}`);
+  };
   return (
     <>
       <Grid
@@ -32,6 +38,7 @@ const HomeBanner = () => {
               position: 'relative',
             }}
             className="custom-border"
+            onClick={() => handleClick(1)}
           >
             <Image
               src={banner1}
@@ -57,6 +64,7 @@ const HomeBanner = () => {
             <Item
               className="custom-border"
               sx={{ boxShadow: 'none', height: '100%' }}
+              onClick={() => handleClick(2)}
             >
               <Image
                 src={banner2}
@@ -76,6 +84,7 @@ const HomeBanner = () => {
             <Item
               className="custom-border"
               sx={{ boxShadow: 'none', height: '100%' }}
+              onClick={() => handleClick(3)}
             >
               <Image
                 src={banner3}

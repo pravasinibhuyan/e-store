@@ -21,7 +21,9 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: roboto.style.fontFamily,
+    allVariants: {
+      fontFamily: roboto.style.fontFamily,
+    },
   },
 });
 

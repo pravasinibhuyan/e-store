@@ -42,6 +42,7 @@ function Header() {
   return (
     <>
       <AppBar
+        position="static"
         sx={{
           width: '100%',
           display: 'flex',

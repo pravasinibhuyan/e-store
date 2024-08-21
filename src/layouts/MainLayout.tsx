@@ -9,7 +9,7 @@ const MainLayout = ({ children }: ChildrenInterface) => {
   return (
     <>
       <Header />
-      <main className="main-container">{children}</main>
+      <main className="main-container ">{children}</main>
       <Footer />
     </>
   );

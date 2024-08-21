@@ -1,5 +1,7 @@
+import { projectFeatureList, usedFeatureList } from '@/components/Data';
+import AboutList from '@/components/about/AboutList';
 import MainLayout from '@/layouts/MainLayout';
-import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Head from 'next/head';
 import { ReactElement } from 'react';
 
@@ -11,31 +13,17 @@ const About = () => {
           About
         </Typography>
         <Typography variant="subtitle1">
-          This website is built with Next.js Commerce, which is a ecommerce
-          template for creating a headless Shopify storefront.
+          This website is built with Next.js, which is a ecommerce template for
+          creating a headless Shopify storefront.
         </Typography>
-        <Typography variant="caption">
-          Support for real-world commerce features including:
-        </Typography>
-        <List
-          sx={{
-            listStyle: 'disc',
-            padding: '2rem',
-            '& .MuiListItem-root': {
-              padding: '10px 0',
-            },
-          }}
-        >
-          <ListItem sx={{ display: 'list-item' }}>
-            <ListItemText primary="A" />
-          </ListItem>
-          <ListItem sx={{ display: 'list-item' }}>
-            <ListItemText primary="List" />
-          </ListItem>
-          <ListItem sx={{ display: 'list-item' }}>
-            <ListItemText primary="Item" />
-          </ListItem>
-        </List>
+        <AboutList
+          listItem={projectFeatureList}
+          title={' Support for real-world commerce features including'}
+        />
+        <AboutList
+          listItem={usedFeatureList}
+          title={'Highlight Next.js features including'}
+        />
       </Box>
     </Box>
   );
