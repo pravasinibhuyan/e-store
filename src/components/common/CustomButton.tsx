@@ -34,7 +34,7 @@ const CustomButton = ({}: CustomButtonProps) => {
           borderRadius: '20px',
         }}
       >
-        Outlined
+        $50.00
       </Typography>
     </Button>
   );

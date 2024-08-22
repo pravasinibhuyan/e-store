@@ -2,7 +2,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-
 }
 
 html,
@@ -13,7 +12,6 @@ body {
 }
 .main-container{
   min-height: calc(100vh - 349px);
-  /* padding: 4.75rem 0; */
 }
 
 .custom-container {
