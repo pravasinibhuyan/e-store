@@ -9,7 +9,7 @@ import HomeBanner from '@/components/home/HomeBanner';
 export default function Home() {
   return (
     <>
-      <Box sx={{ margin: '1rem 0' }}>
+      <Box>
         <HomeBanner />
         <CarouselComponent />
       </Box>

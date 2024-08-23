@@ -20,14 +20,19 @@ const HomeBanner = () => {
     router.push(`/product/${id}`);
   };
   return (
-    <>
+    <Box
+      sx={{
+        width: '90%',
+        maxWidth: '1500px',
+        margin: '1rem auto',
+      }}
+    >
       <Grid
         container
         spacing={2}
         sx={{
           width: '100%',
-          maxWidth: '1500px',
-          margin: '1rem auto',
+          padding: '1rem auto',
         }}
       >
         <Grid item xs={12} md={8}>
@@ -102,7 +107,7 @@ const HomeBanner = () => {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </Box>
   );
 };
 

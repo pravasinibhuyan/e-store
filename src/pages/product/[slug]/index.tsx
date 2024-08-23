@@ -16,6 +16,7 @@ import banner4 from '@/assets/images/cup-white.png';
 import SizeColorButton from '@/components/product/SizeColorButton';
 import AddIcon from '@mui/icons-material/Add';
 import RelatedProduct from '@/components/product/RelatedProduct';
+import { useRouter } from 'next/router';
 
 const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(1),
@@ -27,8 +28,15 @@ const variantSize = ['6 x 8', '7 x 9', '9 x 10', '8 x 11'];
 const variantColor = ['Black', 'white'];
 
 const Product = () => {
+  const router = useRouter();
   return (
-    <Box sx={{ maxWidth: '1500px', margin: '1rem auto', padding: '0 2rem' }}>
+    <Box
+      sx={{
+        width: '90%',
+        maxWidth: '1500px',
+        margin: '1rem auto',
+      }}
+    >
       <Grid
         container
         sx={{
@@ -45,12 +53,14 @@ const Product = () => {
               boxShadow: 'none',
             }}
           >
-            <Image
-              src={banner3}
-              alt=""
-              priority
-              style={{ width: '100%', height: '500px', objectFit: 'contain' }}
-            />
+            <Box sx={{ height: { xs: '300px', md: '500px', width: '100%' } }}>
+              <Image
+                src={banner3}
+                alt=""
+                priority
+                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              />
+            </Box>
             <Box
               sx={{
                 width: '100%',
@@ -138,7 +148,8 @@ const Product = () => {
             <Button
               variant="contained"
               startIcon={<AddIcon />}
-              disabled
+              // disabled
+              onClick={() => router.push('/cart')}
               sx={{
                 textTransform: 'capitalize',
                 width: '100%',
