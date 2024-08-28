@@ -5,16 +5,16 @@
 }
 
 html,
-body{
+body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: rgba(250, 250, 250, 1);  
+  background-color: rgba(250, 250, 250, 1);
 }
-.main-container{
+.main-container {
   min-height: calc(100vh - 349px);
 }
 
-.custom-container{
+.custom-container {
   width: min(1920px, 100%) !important;
   max-width: none !important;
   margin-inline: auto !important;
@@ -60,7 +60,8 @@ body{
   transition: transform 0.2s ease-in-out;
 }
 
-.custom-effect-border,.custom-border {
+.custom-effect-border,
+.custom-border {
   border: 1px solid rgb(228, 226, 226);
   border-radius: 10px;
 }
@@ -69,11 +70,10 @@ body{
   border-color: rgba(37, 99, 235, 1);
 }
 
-.image-zoom{
+.image-zoom {
   transition: transform 0.2s ease-in-out;
 }
 
 .image-zoom:hover {
   transform: scale(1.1);
 }
-
