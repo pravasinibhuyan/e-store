@@ -57,7 +57,7 @@ function Footer() {
         </Box>
         <List
           sx={{
-            color: 'grey',
+            color: 'secondary.main',
           }}
         >
           {footerList.map((item) => (
@@ -83,7 +83,7 @@ function Footer() {
       <Box sx={{ padding: '2rem 0', maxWidth: '50rem', margin: 'auto' }}>
         <Typography
           variant="subtitle1"
-          color="grey"
+          color="secondary.main"
           sx={{ textAlign: { xs: 'center', sm: 'left' } }}
         >
           © 2024 STORE, All rights reserved.

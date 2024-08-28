@@ -27,7 +27,7 @@ const SizeColorButton = ({
             margin: '1rem 0.5rem 0.4rem 0rem',
             fontSize: '12px',
           }}
-          className="no-hover-border"
+          className="custom-border "
         >
           {item}
         </Button>

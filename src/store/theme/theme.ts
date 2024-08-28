@@ -14,7 +14,7 @@ const theme = createTheme({
       main: 'rgba(37,99,235,1)',
     },
     secondary: {
-      main: '#19857b',
+      main: '#808080',
     },
     error: {
       main: red.A400,

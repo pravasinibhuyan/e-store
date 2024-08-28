@@ -25,7 +25,7 @@ const RelatedProduct = () => {
         >
           {sliderItem.map((item) => (
             <Box
-              className="custom-border"
+              className="custom-effect-border"
               sx={{ position: 'relative' }}
               key={item.id}
             >

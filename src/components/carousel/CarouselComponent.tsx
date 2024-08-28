@@ -11,7 +11,7 @@ const CarouselComponent = () => {
         <Box className="slide-track">
           {sliderItem.map((item) => (
             <Box
-              className="slide custom-border"
+              className="slide custom--border"
               sx={{ position: 'relative' }}
               key={item.id}
             >

@@ -59,61 +59,6 @@ function Header() {
               sx={{
                 cursor: 'pointer',
                 display: { xs: 'none', sm: 'flex' },
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '5rem',
-                position: 'relative',
-                '&.MuiBox-root::after': {
-                  borderBottom: '1px solid',
-                  borderBottomStyle: 'dashed',
-                  content: '""',
-                  width: '100%',
-                  height: '1px',
-                  position: 'absolute',
-                },
-              }}
-            >
-              <Typography
-                variant="caption"
-                color="#14cda8"
-                sx={{
-                  position: 'relative',
-                  zIndex: '99',
-                  backgroundColor: 'rgba(250, 250, 250, 1)',
-                  padding: '0.5rem',
-                }}
-              >
-                CART
-              </Typography>
-              <Typography
-                variant="caption"
-                color="grey"
-                sx={{
-                  position: 'relative',
-                  backgroundColor: 'rgba(250, 250, 250, 1)',
-                  zIndex: '99',
-                  padding: '0.5rem',
-                }}
-              >
-                ADDRESS
-              </Typography>
-              <Typography
-                variant="caption"
-                color="grey"
-                sx={{
-                  position: 'relative',
-                  zIndex: '99',
-                  backgroundColor: 'rgba(250, 250, 250, 1)',
-                  padding: '0.5rem',
-                }}
-              >
-                PAYMENT
-              </Typography>
-            </Box>
-            <Box
-              sx={{
-                cursor: 'pointer',
-                display: { xs: 'none', sm: 'flex' },
                 justifyContent: 'flex-end',
                 alignItems: 'center',
                 gap: '0.2rem',
@@ -129,7 +74,7 @@ function Header() {
                   objectFit: 'contain',
                 }}
               />
-              <Typography variant="caption" color="grey">
+              <Typography variant="caption" color="secondary.main">
                 100% SECURE
               </Typography>
             </Box>

@@ -42,7 +42,7 @@ const HomeBanner = () => {
               boxShadow: 'none',
               position: 'relative',
             }}
-            className="custom-border"
+            className="custom-effect-border"
             onClick={() => handleClick(1)}
           >
             <Image
@@ -67,7 +67,7 @@ const HomeBanner = () => {
         <Grid container item xs={12} md={4} spacing={2}>
           <Grid item xs={12}>
             <Item
-              className="custom-border"
+              className="custom-effect-border"
               sx={{ boxShadow: 'none', height: '100%' }}
               onClick={() => handleClick(2)}
             >
@@ -87,7 +87,7 @@ const HomeBanner = () => {
           </Grid>
           <Grid item xs={12} md={12}>
             <Item
-              className="custom-border"
+              className="custom-effect-border"
               sx={{ boxShadow: 'none', height: '100%' }}
               onClick={() => handleClick(3)}
             >

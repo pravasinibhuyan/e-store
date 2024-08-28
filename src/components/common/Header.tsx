@@ -111,7 +111,7 @@ function Header() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   gap: '20px',
-                  color: 'grey',
+                  color: 'secondary.main',
                 }}
               >
                 <Typography variant="subtitle2">All</Typography>
@@ -126,7 +126,7 @@ function Header() {
                 endAdornment={
                   <SearchIcon
                     fontSize="small"
-                    sx={{ color: 'grey', margin: '0 5px' }}
+                    sx={{ color: 'secondary.main', margin: '0 5px' }}
                   />
                 }
               />
