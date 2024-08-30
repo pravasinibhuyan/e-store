@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { InputAdornment, TextField, Typography } from '@mui/material';
 import {
   Control,
   Controller,
@@ -26,7 +26,7 @@ const FormTextInput = ({
   type?: string;
   multiline?: boolean;
   rows?: number;
-  placeholder: string;
+  placeholder?: string;
 }) => {
   return (
     <Controller
@@ -44,10 +44,30 @@ const FormTextInput = ({
               maxRows={4}
               margin="normal"
               fullWidth
-              sx={{ mt: '5px' }}
+              sx={{
+                mt: '5px',
+                padding: '0',
+                '& .MuiInputBase-input': {
+                  padding: '0.5rem',
+
+                  '&::placeholder': {
+                    fontSize: '0.9rem',
+                  },
+                },
+                '& .MuiFormHelperText-root.Mui-error': {
+                  fontSize: '10px',
+                },
+              }}
               type={type}
               error={!!errors[name]}
               helperText={errors[name]?.message as string}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <Typography sx={{ fontSize: '0.9rem' }}> +91</Typography>
+                  </InputAdornment>
+                ),
+              }}
             />
           </>
         );

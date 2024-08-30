@@ -12,11 +12,17 @@ export default function Login() {
   } = useForm();
 
   const onSubmit = async () => {};
+
+  // const handleNumberChange = (e: any) => {
+  //   // Remove non-numeric characters
+  //   const cleanedValue = e.target.value.replace(/\D/g, '');
+
+  //   console.log(cleanedValue);
+  // };
   return (
     <Box
       sx={{
         width: '90%',
-        maxWidth: '1500px',
         margin: 'auto',
         display: 'flex',
         justifyContent: 'center',
@@ -24,16 +30,27 @@ export default function Login() {
         height: ' 100vh',
       }}
     >
-      <Box sx={{ backgroundColor: '#fff' }}>
-        <Typography>Login or Signup</Typography>
-        <form style={{ width: '70%' }} onSubmit={handleSubmit(onSubmit)}>
+      <Box sx={{ backgroundColor: '#fff', padding: '6rem 4rem' }}>
+        <Typography sx={{ textAlign: 'center' }} variant="h6">
+          Login <Typography variant="caption">or</Typography> Signup
+        </Typography>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <FormTextInput
-            name="email"
+            name="number"
             placeholder="Mobile Number"
             control={control}
             errors={errors}
+            type="number"
             rules={{
-              required: 'Please enter a valid mobile number(10 digits)',
+              required: `Please enter a valid mobile number(10 digits)`,
+              maxLength: {
+                value: 10,
+                message: 'Enter a valid number',
+              },
+              minLength: {
+                value: 10,
+                message: 'Enter a valid  number',
+              },
             }}
           />
           <Button
@@ -43,7 +60,6 @@ export default function Login() {
             sx={{
               mt: 3,
               fontSize: '15px',
-              textTransform: 'capitalize',
             }}
           >
             Continue
