@@ -48,7 +48,7 @@ const FormTextInput = ({
                 mt: '5px',
                 padding: '0',
                 '& .MuiInputBase-input': {
-                  padding: '0.5rem',
+                  padding: '0.7rem',
 
                   '&::placeholder': {
                     fontSize: '0.9rem',
@@ -63,9 +63,22 @@ const FormTextInput = ({
               helperText={errors[name]?.message as string}
               InputProps={{
                 startAdornment: (
-                  <InputAdornment position="start">
-                    <Typography sx={{ fontSize: '0.9rem' }}> +91</Typography>
-                  </InputAdornment>
+                  <>
+                    {type === 'number' && (
+                      <InputAdornment position="start">
+                        <Typography
+                          sx={{
+                            fontSize: '0.9rem',
+                            borderRight: '1px solid',
+                            borderRightColor: 'grey',
+                            padding: '0 0.5rem',
+                          }}
+                        >
+                          +91
+                        </Typography>
+                      </InputAdornment>
+                    )}
+                  </>
                 ),
               }}
             />

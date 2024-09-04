@@ -54,14 +54,14 @@ input[type='number'] {
   animation: scroll 40s linear infinite;
   display: flex;
   gap: 20px;
-  width: calc(360px * 10);
+  width: calc(450px * 10);
 }
 
 .slider .slide {
   width: 33%;
-  max-width: 360px;
+  max-width: 450px;
   height: 30vh;
-  max-height: 225px;
+  max-height: 250px;
 }
 
 .slide .img {

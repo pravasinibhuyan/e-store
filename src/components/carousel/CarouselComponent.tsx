@@ -11,15 +11,15 @@ const CarouselComponent = () => {
         <Box className="slide-track">
           {sliderItem.map((item) => (
             <Box
-              className="slide custom--border"
+              className="slide custom-effect-border"
               sx={{ position: 'relative' }}
               key={item.id}
             >
               <Image
                 src={item.image}
                 height="100"
-                width="200"
-                alt=""
+                width="400"
+                alt="banner"
                 priority
                 className="img image-zoom"
               />
@@ -27,7 +27,7 @@ const CarouselComponent = () => {
                 sx={{
                   position: 'absolute',
                   zIndex: 999,
-                  bottom: '0.5rem',
+                  bottom: '1rem',
                   left: '1rem',
                 }}
               >
