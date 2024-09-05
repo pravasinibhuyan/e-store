@@ -7,6 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import logo from '@/assets/images/sticker.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const Search = styled('div')(({ theme }) => ({
   marginLeft: 0,
@@ -111,12 +112,23 @@ function Header() {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   gap: '20px',
-                  color: 'secondary.main',
                 }}
               >
-                <Typography variant="subtitle2">All</Typography>
-                <Typography variant="subtitle2">Shirts</Typography>
-                <Typography variant="subtitle2">Shoes</Typography>
+                <Link href="#" className="underline-none">
+                  <Typography variant="subtitle2" color="secondary.main">
+                    All
+                  </Typography>
+                </Link>
+                <Link href="#" className="underline-none">
+                  <Typography variant="subtitle2" color="secondary.main">
+                    Shirts
+                  </Typography>
+                </Link>
+                <Link href="#" className="underline-none">
+                  <Typography variant="subtitle2" color="secondary.main">
+                    Shoes
+                  </Typography>
+                </Link>
               </Box>
             </Box>
             <Search>

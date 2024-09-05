@@ -1,5 +1,5 @@
+import Header from '@/components/cart/Header';
 import Footer from '@/components/common/Footer';
-import Header from '@/containers/Cart/components/Header';
 
 interface ChildrenInterface {
   children: JSX.Element | JSX.Element[];

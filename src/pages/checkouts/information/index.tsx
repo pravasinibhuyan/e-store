@@ -1,13 +1,26 @@
+import BreadcrumbButton from '@/components/cart/BreadcrumbButton';
+import ShippingAddressForm from '@/components/form/ShippingAddressForm';
 import CartLayout from '@/layouts/CartLayout';
-import { Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Head from 'next/head';
 import React, { ReactElement } from 'react';
 
 const Index = () => {
   return (
-    <div>
-      <Typography variant="h5">Information</Typography>
-    </div>
+    <Box
+      sx={{
+        width: '90%',
+        maxWidth: '700px',
+        margin: '1rem auto',
+      }}
+    >
+      <Box sx={{ margin: '1.5rem 0' }}>
+        <BreadcrumbButton />
+      </Box>
+      <Box>
+        <ShippingAddressForm />
+      </Box>
+    </Box>
   );
 };
 
@@ -18,7 +31,7 @@ Index.getLayout = (page: ReactElement) => {
       <Head>
         <title>Store | Information</title>
       </Head>
-      <CartLayout>{page}</CartLayout>;
+      <CartLayout>{page}</CartLayout>
     </>
   );
 };

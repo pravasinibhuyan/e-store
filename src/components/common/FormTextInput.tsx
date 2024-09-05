@@ -54,9 +54,6 @@ const FormTextInput = ({
                     fontSize: '0.9rem',
                   },
                 },
-                '& .MuiFormHelperText-root.Mui-error': {
-                  fontSize: '10px',
-                },
               }}
               type={type}
               error={!!errors[name]}

@@ -3,7 +3,7 @@ import React from 'react';
 import CustomButton from '@/components/common/CustomButton';
 import Image from 'next/image';
 import banner1 from '@/assets/images/t-shirt-circles-black.png';
-import banner2 from '@/assets/images/bag-black.png';
+import banner2 from '@/assets/images/cowboy-hat-tan-2.png';
 import banner3 from '@/assets/images/cup-black.png';
 import { useRouter } from 'next/router';
 

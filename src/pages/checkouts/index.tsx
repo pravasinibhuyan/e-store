@@ -2,7 +2,9 @@ import { Box } from '@mui/material';
 import CartLayout from '@/layouts/CartLayout';
 import Head from 'next/head';
 import React, { ReactElement } from 'react';
-import CartContainer from '@/containers/Cart/CartContainer';
+import BreadcrumbButton from '@/components/cart/BreadcrumbButton';
+import CartList from '@/components/cart/CartList';
+import TotalSummaryCard from '@/components/cart/TotalSummaryCard';
 
 const Index = () => {
   return (
@@ -13,7 +15,20 @@ const Index = () => {
         margin: '1rem auto',
       }}
     >
-      <CartContainer />
+      <Box sx={{ margin: '1.5rem 0' }}>
+        <BreadcrumbButton />
+      </Box>
+      <Box
+        sx={{
+          display: 'flex',
+          alignContent: 'center',
+          gap: '2rem',
+          flexDirection: { xs: 'column', md: 'row' },
+        }}
+      >
+        <CartList />
+        <TotalSummaryCard />
+      </Box>
     </Box>
   );
 };

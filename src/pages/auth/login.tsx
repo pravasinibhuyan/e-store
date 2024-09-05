@@ -3,7 +3,8 @@ import { Box, Button, Typography } from '@mui/material';
 import Head from 'next/head';
 import { ReactElement, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import loginBanner from '@/assets/login.png';
+import loginBanner from '@/assets/people.jpg';
+import loginBanner2 from '@/assets/Fotos.jpeg';
 
 export default function Login() {
   const [isEmail, setIsEmail] = useState(true);
@@ -21,110 +22,126 @@ export default function Login() {
   return (
     <Box
       sx={{
-        width: '90%',
-        maxWidth: '1200px',
+        width: '100%',
         margin: 'auto',
-        padding: '18vh 0',
         display: 'flex',
         height: '100vh',
         justifyContent: 'space-between',
         alignItems: 'center',
+        flexDirection: { xs: 'column', md: 'row' },
       }}
     >
       <Box
         sx={{
-          width: '50%',
-          height: '100%',
+          width: { xs: '100%', md: '60%' },
           backgroundImage: `url(${loginBanner.src})`,
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
+          height: '100%',
         }}
       ></Box>
       <Box
         sx={{
-          width: '50%',
-          padding: '6rem 4rem',
+          width: { xs: '100%', md: '40%' },
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '10px',
+          backgroundImage: `url(${loginBanner2.src})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'cover',
+          height: '100%',
         }}
       >
-        <Typography
-          sx={{ textAlign: 'center', marginBottom: '4rem' }}
-          variant="h6"
-        >
-          Login <Typography variant="caption">or</Typography> Signup
-        </Typography>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            margin: '1rem 0',
-          }}
-        >
-          <Typography variant="subtitle2">
-            *{isEmail ? emailText : mobileText}
-          </Typography>
+        <Box sx={{ width: '100%', padding: { xs: '2rem', md: '3rem' } }}>
           <Typography
-            variant="subtitle2"
-            sx={{
-              fontWeight: 'normal',
-              cursor: 'pointer',
-              textDecoration: 'underline',
-            }}
-            onClick={() => setIsEmail(!isEmail)}
+            sx={{ marginBottom: '2rem', textAlign: 'center' }}
+            variant="h6"
           >
-            {isEmail ? mobileText : emailText}
+            Login
+            <Typography variant="caption" sx={{ margin: '0 0.5rem' }}>
+              or
+            </Typography>
+            Signup
           </Typography>
-        </Box>
-
-        <form onSubmit={handleSubmit(onSubmit)}>
-          {isEmail ? (
-            <FormTextInput
-              name="email"
-              type="text"
-              placeholder="Enter Email"
-              control={control}
-              errors={errors}
-              rules={{
-                required: `Please enter your email address`,
-                pattern: {
-                  value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
-                  message: 'Please enter a valid email',
-                },
-              }}
-            />
-          ) : (
-            <FormTextInput
-              name="number"
-              placeholder="Mobile Number"
-              control={control}
-              errors={errors}
-              type="number"
-              rules={{
-                required: `Please enter a valid mobile number(10 digits)`,
-                maxLength: {
-                  value: 10,
-                  message: 'Enter a valid number',
-                },
-                minLength: {
-                  value: 10,
-                  message: 'Enter a valid  number',
-                },
-              }}
-            />
-          )}
-          <Button
-            variant="contained"
-            type="submit"
-            fullWidth
+          <Box
             sx={{
-              mt: 3,
-              padding: '0.7rem 0',
-              fontSize: '15px',
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              margin: '1rem 0',
             }}
           >
-            Continue
-          </Button>
-        </form>
+            <Typography
+              variant="subtitle2"
+              sx={{ fontSize: { xs: '12px', md: '15px' } }}
+            >
+              *{isEmail ? emailText : mobileText}
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                fontSize: { xs: '12px', md: '15px' },
+                fontWeight: 'normal',
+                cursor: 'pointer',
+                textDecoration: 'underline',
+              }}
+              onClick={() => setIsEmail(!isEmail)}
+            >
+              {isEmail ? mobileText : emailText}
+            </Typography>
+          </Box>
+
+          <form onSubmit={handleSubmit(onSubmit)}>
+            {isEmail ? (
+              <FormTextInput
+                name="email"
+                type="text"
+                placeholder="Enter Email"
+                control={control}
+                errors={errors}
+                rules={{
+                  required: `Please enter your email address`,
+                  pattern: {
+                    value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                    message: 'Please enter a valid email',
+                  },
+                }}
+              />
+            ) : (
+              <FormTextInput
+                name="number"
+                placeholder="Mobile Number"
+                control={control}
+                errors={errors}
+                type="number"
+                rules={{
+                  required: `Please enter a valid mobile number(10 digits)`,
+                  maxLength: {
+                    value: 10,
+                    message: 'Enter a valid number',
+                  },
+                  minLength: {
+                    value: 10,
+                    message: 'Enter a valid  number',
+                  },
+                }}
+              />
+            )}
+            <Button
+              variant="contained"
+              type="submit"
+              fullWidth
+              sx={{
+                mt: 3,
+                padding: '0.7rem 0',
+                fontSize: '15px',
+              }}
+            >
+              Continue
+            </Button>
+          </form>
+        </Box>
       </Box>
     </Box>
   );

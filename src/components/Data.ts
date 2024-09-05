@@ -70,3 +70,16 @@ export const usedFeatureList = [
   'Styling with Material UI',
   'And more!',
 ];
+
+export const countryList = [
+  { id: 1, value: 'United States' },
+  { id: 2, value: 'Canada' },
+  { id: 4, value: 'Australia' },
+  { id: 6, value: 'France' },
+  { id: 7, value: 'Japan' },
+  { id: 8, value: 'India' },
+  { id: 9, value: 'China' },
+  { id: 11, value: 'Mexico' },
+  { id: 13, value: 'Russia' },
+  { id: 15, value: 'Italy' },
+];

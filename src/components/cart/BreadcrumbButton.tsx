@@ -46,11 +46,11 @@ const BreadcrumbButton = () => {
     <>
       <Breadcrumbs
         aria-label="breadcrumb"
-        separator={<NavigateNextIcon fontSize="small" />}
+        separator={<NavigateNextIcon sx={{ fontSize: '0.9rem' }} />}
         sx={{
           cursor: 'pointer',
           '& .MuiBreadcrumbs-separator': {
-            margin: '0',
+            margin: '0 0.2rem',
           },
         }}
       >
