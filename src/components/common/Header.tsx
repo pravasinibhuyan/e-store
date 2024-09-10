@@ -26,6 +26,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   border: '0.3px solid lightgrey',
   borderRadius: '5px',
   backgroundColor: '#fff',
+
   [theme.breakpoints.down('md')]: {
     width: 'auto',
   },
